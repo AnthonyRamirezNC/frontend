@@ -16,6 +16,12 @@
             color: #fff;
             padding: 10px 0;
             text-align: center;
+
+        }
+        header img {
+
+            width: 400px;
+            height: auto;
         }
         .container {
             width: 80%;
@@ -36,6 +42,7 @@
         }
         .card:hover {
             transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         h2 {
             margin: 0 0 10px;
@@ -56,29 +63,117 @@
         button:hover {
             background: #0056b3;
         }
+        .avatar{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 10px;
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            /* the code below is what controls where the picture is being focused on most specifcially the object-postion rule */
+            object-fit: cover;
+            object-position: top;
+        }
+        h3 {
+            text-align: center;
+        }
+        ul{
+            list-style-type: "🐍 " ;
+        }
+        li {
+        margin-bottom: 10px;
+        }
+
+        .moodboard {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .moodboard-item {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            object-fit: cover;
+            transition: transform 0.2s ease;
+        }
+
+        .moodboard-item:hover {
+            transform: scale(1.1);
+        }
+
+        .moodboard a {
+            color: #007BFF;
+            font-size: 14px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .moodboard a:hover {
+            color: #0056b3;
+        }
+
+        .mission {
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .mission h3 {
+            font-size: 1.5em;
+            color: #333;
+            text-align: center;
+        }
+
+        .mission p {
+            font-size: 1em;
+            color: #555;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+
+
     </style>
 </head>
 <body>
 
 <header>
     <h1>Meet Our Team</h1>
+    <img src="img/new-team-logo.png" alt="img/team-logo.png">
 </header>
 
 <div class="container">
     <div class="card">
         <h2>Haroon Qadri</h2>
+         <div class = "avatar">
+            <img class="avatar" src="img/hero1-aspect-ratio-2-1-1024x512.jpg" alt="Guitar">
+        </div>
         <p>Frontend Developer</p>
         <button onclick="toggleBio('bio1')">Show Bio</button>
-        <p id="bio1" class="bio">Haroon is a frontend developer with experience in React, Typescript, and Javascript.</p>
-        <div id = "moodboord1" class = "moodboord">
-            <h3>Haroon's Inspirations</h3>
-            <img src="path/to/avatar1.jpg" alt="Haroon's">
-            <img src="path/to/js_logo.png" alt="JavaScript">
-            <img src="path/to/react_logo.png" alt="React">
-            <a href="https://github.com/haroon" target="_blank">GitHub</a>
-        </div>
+        <p id="bio1" class="bio">
+        Haroon is a frontend developer with experience in React, Typescript, and Javascript.
+        He really likes frontend development and User Interface engineering. He likes using Visual Studio.
+        You can view some of his work at
+    <a href="https://github.com/haroonqa/" target="_blank">https://github.com/haroonqa/</a>.
+    </p>
+        <div class="moodboard">
+        <img src="img/Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript Logo" class="moodboard-item">
+        <img src="img/images.png" alt="React Logo" class="moodboard-item">
+        <img src="img/vsCode.jpg" alt="VS Code Logo" class="moodboard-item">
+    </div>
 
-        </div>
+    </div>
+
+
+
     </div>
     <div class="card">
         <h2>Jane Smith</h2>
@@ -92,17 +187,64 @@
         <button onclick="toggleBio('bio3')">Show Bio</button>
         <p id="bio3" class="bio">Emily is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
     </div>
-</div>
+    <div class="card">
+        <h2>Moeez Awan</h2>
+
+        <!-- this div can be copied it will be used to hold our image avatars, all you need to do is change the src link and alt -->
+        <div class="avatar">
+            <img class="avatar" src="img/pic_of_moeez.jpg" alt="Moeez's avatar">
+        </div>
+
+        <p>Scrum Master</p>
+        <button onclick="toggleBio('bio4')">Show Bio</button>
+        <p id="bio4" class="bio">Our Scrum Master has been with us for over a year and has been instrumental in guiding our projects to success.
+            He facilitates the Scrum process seamlessly, ensuring that all team members are aligned with Scrum principles and that the process flows smoothly.
+            His coaching has been invaluable, helping the team adopt Agile practices effectively.
+            He diligently keeps the product backlog current, updating tasks and priorities to keep everyone focused on bringing the product to market.
+            Beyond his role in meetings and team onboarding, he’s an advocate for agility and continuous learning, actively working with other Scrum Masters to strengthen Agile practices across the organization.
+            He also promotes Agile engineering methods, which enhances our team's efficiency and adaptability.
+            Outside of work, he has a loves to listen to music, go to concerts, play basketball, and cooking.</p>
+
+
+
+
+    </div>
+    </div>
+
+    <div class="mission/vison">
+        <h3>Team Vision</h3>
+            <p id="mission">
+              Our team’s identity is built upon the foundational values of Scrum: Commitment, Courage, Focus, Openness, and Respect.
+              We are deeply committed to achieving our objectives, ensuring that our projects not only meets but exceeds user expectations.
+              This dedication drives us to consistently deliver high quality solutions that enhance user experience.
+              We embrace courage in the face of challenges, making the right decisions even when the path forward is difficult.
+              We uphold respect for diverse viewpoints, recognizing that collaboration thrives in an open-minded environment.
+              Our commitment to openness fosters an atmosphere where honesty and transparency are paramount; we actively share concerns and challenges.
+              Together, these values shape our team’s culture and guide us in our mission to create an impactful and user-centered products.
+            </p>
+
+        <ul>
+            <li><b>Commitment:</b> Personally dedicated to accomplishing the team's objectives, ensuring all websites meets user needs.</li>
+            <li><b>Courage:</b> Show courage in addressing challenges and making the right decisions, even when tackling difficult problems.</li>
+            <li><b>Focus:</b> Staying focused on delivering a good user experience when using any website.</li>
+            <li><b>Respect:</b> Respecting people's different views on all projects and staying open-minded.</li>
+            <li><b>Openness:</b> Be honest and forthcoming about issues or concerns during the duration of our projects; essentially, stay vigilant.</li>
+
+        </ul>
+    </div>
 
 <script>
     function toggleBio(bioId) {
-        const bio = document.getElementById(bioId);
-        if (bio.style.display === "none" || bio.style.display === "") {
-            bio.style.display = "block";
-        } else {
-            bio.style.display = "none";
-        }
+    const bio = document.getElementById(bioId);
+    const button = bio.previousElementSibling;
+    if (bio.style.display === "none" || bio.style.display === "") {
+        bio.style.display = "block";
+        button.textContent = "Hide Bio";
+    } else {
+        bio.style.display = "none";
+        button.textContent = "Show Bio";
     }
+}
 </script>
 
 </body>
