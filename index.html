@@ -77,16 +77,6 @@
             object-fit: cover;
             object-position: top;
         }
-        h3 {
-            text-align: center;
-        }
-        ul{
-            list-style-type: "🐍 " ;
-        }
-        li {
-        margin-bottom: 10px;
-        }
-
         .moodboard {
             margin-top: 15px;
             display: flex;
@@ -118,28 +108,46 @@
         .moodboard a:hover {
             color: #0056b3;
         }
-
-        .mission {
-            background-color: #eee;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
+        .mission-vision {
+            max-width: 800px;        
+            margin: 0 auto;        
+            padding: 20px;            
+            background-color: #f9f9f9;
+            border-radius: 8px;     
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
         }
 
-        .mission h3 {
-            font-size: 1.5em;
-            color: #333;
+        /* Heading style */
+        h3 {
+            font-size: 1.8em;
+            color: #333;           
             text-align: center;
+            margin-bottom: 10px;
         }
 
-        .mission p {
-            font-size: 1em;
-            color: #555;
-            text-align: justify;
-            line-height: 1.6;
+        /* Paragraph style */
+        #mission{
+            font-size: 1.1em;          
+            line-height: 1.6;          
+            color: #333;                
+            padding: 30px;              
+            background-color: #f0f0f0;  
+            border-radius: 5px;    
         }
+        ul{
+            list-style-type: "🐍 " ;
+            background-color: #f0f0f0;  
+            border-radius: 5px;    
+            margin-left: 10px;     
 
-
+        }
+        li {
+        margin-bottom: 10px;
+        }
+        ul li:last-child {
+        margin-bottom: 40px;      
+        }
+       
 
     </style>
 </head>
@@ -197,21 +205,25 @@
 
         <p>Scrum Master</p>
         <button onclick="toggleBio('bio4')">Show Bio</button>
-        <p id="bio4" class="bio">Our Scrum Master has been with us for over a year and has been instrumental in guiding our projects to success.
+        <p id="bio4" class="bio">
+            Our Scrum Master has been with us for over a year and has been instrumental in guiding our projects to success.
             He facilitates the Scrum process seamlessly, ensuring that all team members are aligned with Scrum principles and that the process flows smoothly.
             His coaching has been invaluable, helping the team adopt Agile practices effectively.
             He diligently keeps the product backlog current, updating tasks and priorities to keep everyone focused on bringing the product to market.
-            Beyond his role in meetings and team onboarding, he’s an advocate for agility and continuous learning, actively working with other Scrum Masters to strengthen Agile practices across the organization.
             He also promotes Agile engineering methods, which enhances our team's efficiency and adaptability.
-            Outside of work, he has a loves to listen to music, go to concerts, play basketball, and cooking.</p>
-
-
-
-
+            Outside of work, he has a loves to listen to music, go to concerts, play basketball, and cooking.
+            <p><i><a href="https://www.linkedin.com/in/moeez-awan-712011240/" target="_blank">Connect with me!</a></i></p>
+        </p>
+       
+        <div class="moodboard">
+            <img src="img/programming-meme.jpeg" alt="meme for CS"  class="moodboard-item">
+            <img src="img/vsCode.jpg" alt="picture of vs code"  class="moodboard-item">
+            <img src="img/programming-meme-2.jpg" alt="michael scott meme"  class="moodboard-item">
+        </div>
     </div>
     </div>
 
-    <div class="mission/vison">
+    <div class="mission-vison">
         <h3>Team Vision</h3>
             <p id="mission">
               Our team’s identity is built upon the foundational values of Scrum: Commitment, Courage, Focus, Openness, and Respect.
@@ -223,6 +235,7 @@
               Together, these values shape our team’s culture and guide us in our mission to create an impactful and user-centered products.
             </p>
 
+            <h3>Our Team Rules</h3>
         <ul>
             <li><b>Commitment:</b> Personally dedicated to accomplishing the team's objectives, ensuring all websites meets user needs.</li>
             <li><b>Courage:</b> Show courage in addressing challenges and making the right decisions, even when tackling difficult problems.</li>
