@@ -1,0 +1,23 @@
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Team Bio</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            background-color: #f4f4f4;\n            margin: 0;\n            padding: 0;\n        }\n        header {\n            background: #333;\n            color: #fff;\n            padding: 10px 0;\n            text-align: center;\n        }\n        .container {\n            width: 80%;\n            margin: 20px auto;\n            display: flex;\n            flex-wrap: wrap;\n            justify-content: space-between;\n        }\n        .card {\n            background: white;\n            border-radius: 8px;\n            box-shadow: 0 2px 5px rgba(0,0,0,0.1);\n            margin: 10px;\n            padding: 20px;\n            flex: 1 1 calc(30% - 40px);\n            text-align: center;\n            transition: transform 0.2s;\n        }\n        .card:hover {\n            transform: scale(1.05);\n        }\n        h2 {\n            margin: 0 0 10px;\n        }\n        .bio {\n            display: none; /* Initially hide the bio section */\n            margin-top: 10px;\n            color: #555;\n        }\n        button {\n            background: #007BFF;\n            color: white;\n            border: none;\n            padding: 10px 15px;\n            border-radius: 5px;\n            cursor: pointer;\n        }\n        button:hover {\n            background: #0056b3;\n        }\n    </style>\n</head>\n<body>\n\n<header>\n    <h1>Meet Our Team</h1>\n</header>\n\n<div class=\"container\">\n    <div class=\"card\">\n        <h2>John Doe</h2>\n        <p>Frontend Developer</p>\n        <button onclick=\"toggleBio('bio1')\">Show Bio</button>\n        <p id=\"bio1\" class=\"bio\">John is a skilled frontend developer with 5 years of experience in creating responsive web applications.</p>\n    </div>\n    <div class=\"card\">\n        <h2>Jane Smith</h2>\n        <p>Backend Developer</p>\n        <button onclick=\"toggleBio('bio2')\">Show Bio</button>\n        <p id=\"bio2\" class=\"bio\">Jane is a backend developer specializing in server-side logic and database management.</p>\n    </div>\n    <div class=\"card\">\n        <h2>Emily Johnson</h2>\n        <p>UI/UX Designer</p>\n        <button onclick=\"toggleBio('bio3')\">Show Bio</button>\n        <p id=\"bio3\" class=\"bio\">Emily is a UI/UX designer with a passion for creating user-friendly interfaces.</p>\n    </div>\n</div>\n\n<script>\n    function toggleBio(bioId) {\n        const bio = document.getElementById(bioId);\n        if (bio.style.display === \"none\" || bio.style.display === \"\") {\n            bio.style.display = \"block\";\n        } else {\n            bio.style.display = \"none\";\n        }\n    }\n</script>\n\n</body>\n</html>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+--- a/index.html	(revision 64bc6793a19cffa8c973aa0ddd883eff74e86bfa)
++++ b/index.html	(date 1730316132463)
+@@ -78,10 +78,10 @@
+         <p id="bio2" class="bio">Jane is a backend developer specializing in server-side logic and database management.</p>
+     </div>
+     <div class="card">
+-        <h2>Emily Johnson</h2>
++        <h2>Rida Azam</h2>
+         <p>UI/UX Designer</p>
+         <button onclick="toggleBio('bio3')">Show Bio</button>
+-        <p id="bio3" class="bio">Emily is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
++        <p id="bio3" class="bio">Rida is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
+     </div>
+ </div>
+ 
